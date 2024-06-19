@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06df45618ebb8ff46b8ff38b6231eb3d, type: 3}
+  m_Name: wave_2_basic_1_fast_count_10
+  m_EditorClassIdentifier: 
+  miniWaves:
+  - enemySpawnDatas:
+    - enemyData: {fileID: 11400000, guid: fa0657e7c37e9794d9ff645c5de9afd8, type: 2}
+    - enemyData: {fileID: 11400000, guid: fa0657e7c37e9794d9ff645c5de9afd8, type: 2}
+    - enemyData: {fileID: 11400000, guid: 804bc5b3b201b3441bfcc6ead04baf3d, type: 2}
+    spawnCount: 2
+    duration: 15
+    spawnDelay: 2
+  - enemySpawnDatas:
+    - enemyData: {fileID: 11400000, guid: fa0657e7c37e9794d9ff645c5de9afd8, type: 2}
+    - enemyData: {fileID: 11400000, guid: 804bc5b3b201b3441bfcc6ead04baf3d, type: 2}
+    spawnCount: 2
+    duration: 15
+    spawnDelay: 2
+  duration: 55
