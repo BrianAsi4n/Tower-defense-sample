@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FastEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4040216945565892485, guid: 5fa616f1f396f634886763eadc591c01, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4445323601088660319, guid: 5fa616f1f396f634886763eadc591c01, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

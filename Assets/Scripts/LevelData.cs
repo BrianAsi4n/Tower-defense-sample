@@ -16,4 +16,3 @@ public class LevelData : ScriptableObject
     public NodeData End => end;
     public WaveData[] Waves => waves;
 }
-
