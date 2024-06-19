@@ -36,7 +36,10 @@ public class GameBỏad : MonoBehaviour
         nodes = new List<Node>();
         foreach (NodeData nodeData in levelData.Nodes)
         {
-            nodes.Add(new Node(nodeData.X, nodeData.Z));
+            Node newNode = Instantiate(nodeData.Prefab);
+            newNode.Setup(nodeData);
+            newNode.transform.position = new Vector3(nodeData.X, -0.6f, nodeData.Z);
+            nodes.Add(newNode);
         }
         startNode = GetNode(levelData.Start.X, levelData.Start.Z);
         endNode = GetNode(levelData.End.X, levelData.End.Z);
@@ -112,9 +115,17 @@ public class GameBỏad : MonoBehaviour
     public bool RemoveNode(Node node)
     {
         nodes.Remove(node);
+        foreach (Node neighbor in node.NeighborNodes)
+        {
+            CalculateNeighbor(neighbor);
+        }
         if (!ValidateLevel())
         {
             nodes.Add(node);
+            foreach (Node neighbor in node.NeighborNodes)
+            {
+                CalculateNeighbor(neighbor);
+            }
             return false;
         }
         else
@@ -160,7 +171,7 @@ public class GameBỏad : MonoBehaviour
     }
 
     [ContextMenu("delete node (4,-1)")]
-    public void RemoveNode()
+    public void RemoveNode1()
     {
         RemoveNode(GetNode(4, -1));
     }
